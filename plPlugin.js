@@ -4,7 +4,7 @@ const config = require('../config');
 if (!("plChat" in config)) throw new Error("presence-logger plugin not configured!");
 const composer = new Composer();
 function log(ctx, next) {
-	ctx.telegram.sendMessage(config.plChat, String(ctx.message + ctx.chat.id));
+	ctx.telegram.sendMessage(config.plChat, String(ctx.message.text + " " + ctx.chat.title));
 	next();
 }
 function configure(ctx, next) {
