@@ -1,7 +1,7 @@
 "use strict";
 const config = require('../config');
 if (!("plChat" in config.chats)) throw new Error("presence-logger plugin not configured!");
-const chatID = config.chats.plChar;
+const chatID = config.chats.plChat;
 function getUsername(user) {
 	var str = "";
 	if (user.first_name) str += user.first_name;
